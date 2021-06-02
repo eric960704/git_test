@@ -7,7 +7,7 @@ pipeline {
                 anyOf {
                     branch 'master'
                     branch 'dev'
-                }
+            	   }
             } */
             steps {
                 sh 'chmod +x ./gradlew'
@@ -17,7 +17,7 @@ pipeline {
                     inclusionPattern: '**/*.class',
                     exclusionPattern: '**/*Test*.class',
                     execPattern: 'app/build/jacoco/**/*.exec'
-                )
+            	   )
             }
         }
     }
